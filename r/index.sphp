@@ -1,0 +1,86 @@
+<?php
+session_start();
+include_once "conexion.php";
+
+function verificar_login($user,$password,&$result)
+    {
+        $sql = "SELECT * FROM usuarios WHERE usuario='$user' and password='$password'";
+        $rec = mysql_query($sql);
+        $count = 0;
+        while($row = mysql_fetch_object($rec))
+        {
+            $count++;
+            $result = $row;
+        }
+        if($count == 1)
+        {
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+	
+	if(!isset($_SESSION['userid']))
+{
+    if(isset($_POST['login']))
+    {
+        if(verificar_login($_POST['user'],$_POST['password'],$result) == 1)
+        {
+            $_SESSION['userid'] = $result->idusuario;
+            header("location:accesuser.php");
+		}
+        else
+        {
+            echo '<div class="error">Su nombre o contraseña es incorrecta, intente nuevamente.</div>';
+        }
+    }
+?>
+<body bgcolor="5CB25F" text="E5E2E2">
+ 
+<marquee>
+<font size=8 face="papyrus,times new roman">Bienvenido</font>
+</marquee>
+<colgroup span="2">
+</colgroup>
+ <?php
+
+    include("encabezado.php");
+  ?> <br>
+
+<ul id="menu0"> 
+<li><a href="index.php">Inicio</a></li>
+<li><a href="somos.php">Quienes somos?</a></li>
+<li><a href="Horario.php">Horarios de rutas</a></li>
+<li><a href="contacto.php">Contacto</a></li>
+<li><a href="ruta1.php">Ver Rutas</a></li>
+</ul>
+<br>
+<br>
+<center>
+ <h1 align ="center" class="hboxthumb">Sistema de rutas CD valles </h1>
+ <center><p> Nota: Solo el administrador puede modificar rutas</p>
+<?php include_once 'estilos.css';?>
+ 
+ <form action="" method="post" class="login">
+    <div><label>Usuario: </label><input name="user" type="text" ></div>
+    <div><label>Contrasena: </label><input name="password" type="password"></div>
+    <div>
+	<input name="submit" type="submit" value="Registrar">
+	<input name="login" type="submit" value="Entrar"></div>
+	</form>
+	
+<h2 align ="center" class="hboxthumb"> Buscar un lugar </h2>
+
+<html>
+<?php include_once 'gmap.php';?>
+</html>
+<?php
+
+} else {
+    echo '<a href="logout.php">Logout</a>';
+}
+?>
+
+<><div id="copyright">Copyright&copy; 2013 - @Sistema de rutas - Todos los derechos reservados</div></html>

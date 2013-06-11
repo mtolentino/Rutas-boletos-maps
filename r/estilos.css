@@ -1,0 +1,113 @@
+ <style type="text/css">
+form.login {
+    background: none repeat scroll 0 0 #173B0B;
+    border: 1px solid #DDDDDD;
+    font-family: sans-serif;
+    margin: 5 auto;
+    padding: 20px;
+    width: 278px;
+}
+/*menu*/
+#menu0 {
+margin: 0px;
+padding: 0px;
+list-style-type: none;
+}
+#menu0 a, #menu0 a:visited {
+font-family: Verdana, Geneva, sans-serif;
+font-size: 15px;
+line-height: 15px;
+color: #000;
+background-color: BF4B3C;
+display: block;
+margin-right: 10px;
+float: left;
+text-align:right;
+padding: 10px 20px;
+text-decoration: none;
+}
+#menu0 a:hover {
+color: #FFF;
+background-color: #F90;
+}
+#menu0 .actual {
+color: #333;
+background-color: #FFF;
+border-bottom-width: 4px;
+border-bottom-style: solid;
+border-bottom-color: #666;
+}
+
+#menu1 a, #menu1 a:visited {
+font-family: Verdana, Geneva, sans-serif;
+font-size: 15px;
+line-height: 15px;
+color: #000;
+background-color: #04B431;
+display: block;
+margin-right: 4px;
+float:;
+text-align: center;
+padding: 10px 30px;
+text-decoration: none;
+}
+#menu1 a:hover {
+color: #FFF;
+background-color: #F90;
+}
+#menu1 .actual {
+color: #333;
+background-color: #FFF;
+border-bottom-width: 4px;
+border-bottom-style: solid;
+border-bottom-color: #666;
+}
+#menu2 a, #menu2 a:visited {
+font-family: Verdana, Geneva, sans-serif;
+font-size: 15px;
+line-height: 15px;
+color: #000;
+background-color: #999;
+display: block;
+margin-right: 4px;
+float:;
+text-align: center;
+padding: 10px 80px;
+text-decoration: none;
+}
+#menu2 a:hover {
+color: #FFF;
+background-color: #F90;
+}
+#menu2 .actual {
+color: #333;
+background-color: #FFF;
+border-bottom-width: 4px;
+border-bottom-style: solid;
+border-bottom-color: #666;
+}
+#menu{
+ background:#f9f9f9;
+ border:solid 1px #DEDEDE;
+ border-radius:3px;
+ width:600px;
+ padding:5px;
+ }
+
+#google_map {
+    text-align:center;
+    margin-right: 0px;
+    margin-top:0;
+}
+#menu a {color: #CCCCCC; display:block; text-decoration:none; background-color: #1C1C1C; margin: 1px}
+#menu a:link {} 
+#menu a:visited {} 
+#menu a:hover {color: #FFFFFF; background-color:#000000} 
+#menu a:active {color: #99FFFF}
+
+#ul {margin: 0px; padding: 0px; list-style: none}
+#h4 {color: #CCCCCC; font-weight: bold; font-size:20px}
+#h1 {font-size:25px}
+#h2 {font-size:20px}
+#h3 {font-size:15px}
+</style>
